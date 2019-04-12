@@ -12,7 +12,152 @@ Three .txt files are being output in the current folder:
 
 The nodes are stored in this format.
 if node is,
-	1 2 3
-	4 5 6
-	7 8 0
+	[1 2 3
+	 4 5 6
+	 7 8 0]
 it is stored as 1 4 7 2 5 8 3 6 0 in the Nodes.txt and nodePath.txt file.
+
+Run the plotOutput_text.m file in the 'File to Visualize....' folder. Run it as the following in the command window of MATLAB plotOutput_text "<path_to_nodepath.txt>".
+CREDITS: Ashwin Goyal for creating this UI in MATLAB.
+
+In the example folder, I have uploaded the files that correspond to the input
+ [6 5 8
+  2 7 3
+  4 1 0]
+
+The process goes as follows:
+
+```bash
+
+INFO:	Input Initial node configuration. Numbers are parsed row-wise upto 3 elements in each row.
+INFO:	Don't forget that '0' represents the empty space.
+INFO:	Press [ENTER] after every number:
+6
+5
+8
+2
+7
+3
+4
+1
+0
+
+INFO:	Matrix being input:
+[[6 5 8]
+ [2 7 3]
+ [4 1 0]] 
+
+INFO:	If this is the matrix you wanted as initial configuration, press [y]. Else press [n] and retry.
+y
+
+INFO:	Goal node is:
+[[1 2 3]
+ [4 5 6]
+ [7 8 0]]
+
+Calculating path to goal node, hold on!!....
+
+
+INFO:	Path to Goal node is as follows
+
+[[6 5 8]
+ [2 7 3]
+ [4 1 0]] 
+
+[[6 5 8]
+ [2 7 0]
+ [4 1 3]] 
+
+[[6 5 8]
+ [2 0 7]
+ [4 1 3]] 
+
+[[6 5 8]
+ [2 1 7]
+ [4 0 3]] 
+
+[[6 5 8]
+ [2 1 7]
+ [4 3 0]] 
+
+[[6 5 8]
+ [2 1 0]
+ [4 3 7]] 
+
+[[6 5 0]
+ [2 1 8]
+ [4 3 7]] 
+
+[[6 0 5]
+ [2 1 8]
+ [4 3 7]] 
+
+[[0 6 5]
+ [2 1 8]
+ [4 3 7]] 
+
+[[2 6 5]
+ [0 1 8]
+ [4 3 7]] 
+
+[[2 6 5]
+ [1 0 8]
+ [4 3 7]] 
+
+[[2 6 5]
+ [1 3 8]
+ [4 0 7]] 
+
+[[2 6 5]
+ [1 3 8]
+ [4 7 0]] 
+
+[[2 6 5]
+ [1 3 0]
+ [4 7 8]] 
+
+[[2 6 5]
+ [1 0 3]
+ [4 7 8]] 
+
+[[2 0 5]
+ [1 6 3]
+ [4 7 8]] 
+
+[[2 5 0]
+ [1 6 3]
+ [4 7 8]] 
+
+[[2 5 3]
+ [1 6 0]
+ [4 7 8]] 
+
+[[2 5 3]
+ [1 0 6]
+ [4 7 8]] 
+
+[[2 0 3]
+ [1 5 6]
+ [4 7 8]] 
+
+[[0 2 3]
+ [1 5 6]
+ [4 7 8]] 
+
+[[1 2 3]
+ [0 5 6]
+ [4 7 8]] 
+
+[[1 2 3]
+ [4 5 6]
+ [0 7 8]] 
+
+[[1 2 3]
+ [4 5 6]
+ [7 0 8]] 
+
+[[1 2 3]
+ [4 5 6]
+ [7 8 0]]
+
+```
