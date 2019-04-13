@@ -1,6 +1,6 @@
 ## This is an implementation of Breadth First Search for solving 8-puzzle problem.
 
-To run the file, execute 'python2 rprakas2_project1.py' and follow instructions as shown in console.
+To run the file, execute ```python2 rprakas2_project1.py``` and follow instructions as shown in console.
 NOTE: 
 1. Do not input negative numbers.
 
@@ -26,7 +26,7 @@ In the example folder, I have uploaded the files that correspond to the input</b
 The process goes as follows:
 
 ```bash
-python rprakas2_project1.py
+>>python rprakas2_project1.py
 INFO:	Input Initial node configuration. Numbers are parsed row-wise upto 3 elements in each row.
 INFO:	Don't forget that '0' represents the empty space.
 INFO:	Press [ENTER] after every number:
