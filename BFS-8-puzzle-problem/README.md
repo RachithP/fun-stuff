@@ -1,6 +1,6 @@
 ## This is an implementation of Breadth First Search for solving 8-puzzle problem.
 
-To run the file, execute ```python2 rprakas2_project1.py``` and follow instructions as shown in console.
+To run the file, execute ```python2 bfs_8_puzzle.py``` and follow instructions as shown in console.
 NOTE: 
 1. Do not input negative numbers.
 
