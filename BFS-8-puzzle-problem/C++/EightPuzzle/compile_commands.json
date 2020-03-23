@@ -1,0 +1,17 @@
+[{
+  "file": "/home/rachith/git/fun-stuff/BFS-8-puzzle-problem/C++/EightPuzzle/bfs/src/Node/node.h",
+  "directory": "/home/rachith/git/fun-stuff/BFS-8-puzzle-problem/C++/EightPuzzle/bfs",
+  "command": "clang  -c /home/rachith/git/fun-stuff/BFS-8-puzzle-problem/C++/EightPuzzle/bfs/src/Node/node.h -o /home/rachith/git/fun-stuff/BFS-8-puzzle-problem/C++/EightPuzzle/bfs/src/Node/node.h.o  -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include -I. -I.  -Wmain  -g  -O0  -W  -std=c++14  -Wall"
+ }, {
+  "file": "/home/rachith/git/fun-stuff/BFS-8-puzzle-problem/C++/EightPuzzle/bfs/src/Node/node.cpp",
+  "directory": "/home/rachith/git/fun-stuff/BFS-8-puzzle-problem/C++/EightPuzzle/bfs",
+  "command": "clang  -c /home/rachith/git/fun-stuff/BFS-8-puzzle-problem/C++/EightPuzzle/bfs/src/Node/node.cpp -o /home/rachith/git/fun-stuff/BFS-8-puzzle-problem/C++/EightPuzzle/bfs/src/Node/node.cpp.o  -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include -I. -I.  -Wmain  -g  -O0  -W  -std=c++14  -Wall"
+ }, {
+  "file": "/home/rachith/git/fun-stuff/BFS-8-puzzle-problem/C++/EightPuzzle/bfs/main.cpp",
+  "directory": "/home/rachith/git/fun-stuff/BFS-8-puzzle-problem/C++/EightPuzzle/bfs",
+  "command": "clang  -c /home/rachith/git/fun-stuff/BFS-8-puzzle-problem/C++/EightPuzzle/bfs/main.cpp -o /home/rachith/git/fun-stuff/BFS-8-puzzle-problem/C++/EightPuzzle/bfs/main.cpp.o  -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include -I. -I.  -Wmain  -g  -O0  -W  -std=c++14  -Wall"
+ }, {
+  "file": "/home/rachith/git/fun-stuff/BFS-8-puzzle-problem/C++/EightPuzzle/bfs/src/Move/move.h",
+  "directory": "/home/rachith/git/fun-stuff/BFS-8-puzzle-problem/C++/EightPuzzle/bfs",
+  "command": "clang  -c /home/rachith/git/fun-stuff/BFS-8-puzzle-problem/C++/EightPuzzle/bfs/src/Move/move.h -o /home/rachith/git/fun-stuff/BFS-8-puzzle-problem/C++/EightPuzzle/bfs/src/Move/move.h.o  -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include -I. -I.  -Wmain  -g  -O0  -W  -std=c++14  -Wall"
+ }]
