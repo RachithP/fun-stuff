@@ -5,6 +5,8 @@
 #include <iostream>
 #include <memory>
 
+// --------------------------Just different ways of concept syntax --------------------------
+// ------------------------------------------------------------------------------------------
 template <typename T>
 concept check = requires (T v)
 {
@@ -33,52 +35,73 @@ float square(T num) {
     return num * num;
 }
 
-void hello(int x, int* p) {
-    std::cout << "value: " << x << std::endl;
-    std::cout << "address: " << &x << std::endl;
-
-    std::cout << "pointing value: " << *p << std::endl;
-    std::cout << "pointer value: " << p << std::endl;
-    std::cout << "pointer address: " << &p << std::endl;
-}
+// -------------------------- using concepts to automatically resolve templates --------------------------
+// -------------------------------------------------------------------------------------------------------
+template <typename T>
+concept check_int = std::same_as<T, int>;
 
 template <typename T>
-class engine {
+concept check_float = std::same_as<T, float>;
 
-public:
-    engine(T& p) {
-        p_ = p;
-        std::cout << "pointing value: " << *p_ << std::endl;
-        std::cout << "pointer value: " << p_ << std::endl;
-        std::cout << "pointer address: " << &p_ << std::endl;     
-    }
-private:
-    T& p_ = nullptr;
-};
+void func(check_int auto a){
+    std::cout << "resolved to int" << std::endl;
+}
 
-// void bye(T& p) {
-//     std::cout << "pointing value: " << *p << std::endl;
-//     std::cout << "pointer value: " << p << std::endl;
-//     std::cout << "pointer address: " << &p << std::endl;
-// }
+void func(check_float auto a){
+    std::cout << "resolved to float" << std::endl;
+}
+
+// -------------------------- using concepts to automatiicaly resolve templates --------------------------
+// -------------------------- checking with std::derived_from  -------------------------------------------
+
+class Base
+{};
+
+class A : public Base
+{};
+
+class B : public A
+{};
+
+template <typename T>
+concept cbase = std::derived_from<T, Base>;
+
+template <typename T>
+// concept ca = std::derived_from<T, A>; // fails error: call of overloaded 'bar(A&)' is ambiguous
+concept ca = cbase<T> && std::derived_from<T, A>;
+
+template <typename T>
+// concept cb = std::derived_from<T, B>; // fails error: call of overloaded 'bar(B&)' is ambiguous
+// concept cb = cbase<T> && std::derived_from<T, B>; // fails error: call of overloaded 'bar(B&)' is ambiguous
+concept cb = ca<T> && std::derived_from<T, B>;
+
+void bar(cbase auto a){
+    std::cout << "resolved to cbase" << std::endl;
+}
+
+void bar(ca auto a){
+    std::cout << "resolved to ca" << std::endl;
+}
+
+void bar(cb auto a){
+    std::cout << "resolved to cb" << std::endl;
+}
 
 int main() {
 
-    int a = 2;
-    std::cout << square(a) << std::endl;
+    // int x = 2;
+    // float y = 1;
+    // std::cout << square(x) << std::endl;
+    // func(x); // resolves to the func that has check_int
+    // func(y); // resolves to the func that has check_float
 
-    // int b = 4;
-    // std::cout << "value: " << b << std::endl;
-    // std::cout << "address: " << &b << std::endl;
-    // hello(b, &b);
+    Base base;
+    A a;
+    B b;
 
-    std::unique_ptr<int> c = std::make_unique<int>(8);
-    std::cout << "value: " << *c << std::endl;
-    std::cout << "address: " << c << std::endl;
-    std::cout << "pointer address: " << &c << std::endl;
-    // bye(c);
-
-    engine<int> o = engine<int>(c);
+    bar(base);
+    bar(a);
+    bar(b);
 
     return 0;
 }
